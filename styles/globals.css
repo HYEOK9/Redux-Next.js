@@ -1,0 +1,45 @@
+body,
+html {
+    font-size: 16px;
+    margin: 0;
+    width: 100%;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+header,
+section,
+article,
+footer,
+main,
+a,
+button,
+input,
+img,
+nav,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
