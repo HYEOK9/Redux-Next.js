@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 // import { useRecoilState } from 'recoil';
 // import { curCategoryAtom } from '../../store/recoil';
-import { RootState } from "../../store/redux";
+import { RootState } from "../../store";
 import { useDispatch, useSelector } from "react-redux";
-import { changeCurCategory } from "../../store/CurCategory";
-
+import { CurCategoryActions } from "../../store/CurCategory";
 interface propType {
     value: string;
 }
@@ -22,8 +21,8 @@ const CategoryButton = (props: propType) => {
 
     const onClick = () => {
         if (curCategory.name === props.value)
-            dispatch(changeCurCategory("none"));
-        else dispatch(changeCurCategory(props.value));
+            dispatch(CurCategoryActions.changeCurCategory("none"));
+        else dispatch(CurCategoryActions.changeCurCategory(props.value));
     };
 
     return (

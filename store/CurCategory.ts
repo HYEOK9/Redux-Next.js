@@ -1,17 +1,18 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export interface CurCategoryState {
+export interface CategoryState {
     name: string;
 }
-const initialState: CurCategoryState = {
+
+const initialState: CategoryState = {
     name: "none",
 };
 const CurCategorySlice = createSlice({
-    name: "CurCategory",
+    name: "CurCategorySlice",
     initialState,
     reducers: {
         changeCurCategory: (
-            state: CurCategoryState,
+            state: CategoryState,
             action: PayloadAction<string>
         ) => {
             state.name = action.payload;
@@ -19,5 +20,5 @@ const CurCategorySlice = createSlice({
     },
 });
 
-export const { changeCurCategory } = CurCategorySlice.actions;
-export default CurCategorySlice;
+export const CurCategoryActions = CurCategorySlice.actions;
+export default CurCategorySlice.reducer;
